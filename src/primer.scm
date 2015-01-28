@@ -1,5 +1,5 @@
 (define (square x)(* x x))
-(define (primer n)
+(define (prime? n)
 	(= n (smallest-divisor n)))
 (define (smallest-divisor n)
 	(find-divisor n 2))
