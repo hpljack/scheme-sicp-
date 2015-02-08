@@ -1,4 +1,4 @@
-(load "37-cont-frac.scm")
+(load "37-rec-cont-frac.scm")
 
 (define (golden-ratio k)
   (+ 1

@@ -1,0 +1,17 @@
+(define (deriv g)
+  (lambda(x)
+    (/ (-(g (+ x dx))(g x))
+       dx)))
+(define dx 0.00001)
+(define (cube x)(* x x x))
+(define (newton-transform g)
+  (lambda(x)
+    (- x(/(g x)((deriv g)x)))))
+(load "fixed-point.scm")
+(define (newtons-method g guess)
+  (fixed-point(newton-transform g)guess))
+
+(define (square x)(* x x))
+(define (sqrt x)
+  (newtons-method(lambda(y)(- (square y) x)) 1.0))
+

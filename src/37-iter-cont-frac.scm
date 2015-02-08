@@ -4,6 +4,6 @@
 	result
 	(iter (- i 1)
 	      (/ (N i)
-		 (+ (D i) result))))
+		 (+ (D i) result)))))
     (iter (- k 1)
 	  (/ (N k)(D k))))
