@@ -1,0 +1,7 @@
+(load "7-define-interval.scm")
+(define (make-center-percent n p)
+  (make-interval (* n (- 100 p))
+		 (* n (+ 100 p))))
+
+
+(define (
