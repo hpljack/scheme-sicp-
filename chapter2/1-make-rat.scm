@@ -1,4 +1,5 @@
 ;;;construct function
+;Plan A 
 (define (make-rat n d)(cons n d))
 (define (make-rat n d)
 	(let((g (gcd n d)))
@@ -6,6 +7,16 @@
 ;;;choice function
 (define (numer x)(car x))
 (define (denom x)(cdr x))
+
+;;plan B
+
+(define (make-rat n d)(cons n d))
+(define (numer x)
+	(let ((g (gcd (car x)(cdr x))))
+		(/ (car x) g)))
+(define (denom x)
+	(let ((g (gcd (car x)(cdr x))))
+		(/ (cdr x) g)))
 
 
 (define (add-rat x y)
